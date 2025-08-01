@@ -6,7 +6,7 @@ services:
     expose:
       - "3000"
     env_file:
-      - ./.env.production
+      - ./client/.env.local
     networks:
       - shared
 
@@ -17,7 +17,7 @@ services:
     expose:
       - "8000"
     env_file:
-      - ./.env.production
+      - ./server/.env.production
     networks:
       - shared
 
