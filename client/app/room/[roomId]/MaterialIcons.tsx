@@ -1,5 +1,5 @@
 // Material Icons SVGs for Google Meet style controls
-export const MicIcon = ({off = false, ...props}: {off?: boolean, [key: string]: any}) => off ? (
+export const MicIcon = ({off = false, ...props}: {off?: boolean} & React.SVGProps<SVGSVGElement>) => off ? (
   <svg {...props} viewBox="0 0 24 24" fill="none" width="28" height="28">
     <path d="M12 15a3 3 0 0 0 3-3V6a3 3 0 0 0-6 0v6a3 3 0 0 0 3 3zm5-3c0 2.76-2.24 5-5 5s-5-2.24-5-5H5c0 3.53 2.61 6.43 6 6.92V21h2v-2.08c3.39-.49 6-3.39 6-6.92h-2z" fill="#fff"/>
     <line x1="3" y1="3" x2="21" y2="21" stroke="#fff" strokeWidth="2" strokeLinecap="round"/>
@@ -8,7 +8,7 @@ export const MicIcon = ({off = false, ...props}: {off?: boolean, [key: string]: 
   <svg {...props} viewBox="0 0 24 24" fill="none" width="28" height="28"><path d="M12 15a3 3 0 0 0 3-3V6a3 3 0 0 0-6 0v6a3 3 0 0 0 3 3zm5-3c0 2.76-2.24 5-5 5s-5-2.24-5-5H5c0 3.53 2.61 6.43 6 6.92V21h2v-2.08c3.39-.49 6-3.39 6-6.92h-2z" fill="#fff"/></svg>
 );
 
-export const VideoIcon = ({off = false, ...props}: {off?: boolean, [key: string]: any}) => off ? (
+export const VideoIcon = ({off = false, ...props}: {off?: boolean} & React.SVGProps<SVGSVGElement>) => off ? (
   <svg {...props} viewBox="0 0 24 24" fill="none" width="28" height="28"><path d="M21 6.5l-4 4V7a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-3.5l4 4V6.5z" fill="#fff"/><line x1="2" y1="2" x2="22" y2="22" stroke="#fff" strokeWidth="2"/></svg>
 ) : (
   <svg {...props} viewBox="0 0 24 24" fill="none" width="28" height="28"><path d="M17 10.5V7a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-3.5l4 4v-11l-4 4z" fill="#fff"/></svg>
