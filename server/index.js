@@ -7,12 +7,18 @@ const app = express();
 app.use(cors());
 
 const server = http.createServer(app);
-const SOCKET_SERVER_URL = process.env.SOCKET_SERVER_URL || 'http://localhost:8000';
+const SOCKET_SERVER_URL = process.env.SOCKET_SERVER_URL || 'http://localhost:8000/api';
 const io = new Server(server, {
   cors: {
     origin: SOCKET_SERVER_URL,
     methods: ['GET', 'POST']
-  }
+  },
+  path: '/api/socket.io' // Ajout du chemin pour Socket.IO
+});
+
+// Préfixer les routes API
+app.use('/api', (req, res) => {
+  res.send('API is running');
 });
 
 const rooms = {};
