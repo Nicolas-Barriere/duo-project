@@ -12,7 +12,7 @@ export default function Room() {
 
   const localVideoRef = useRef<HTMLVideoElement>(null);
   const remoteVideoRef = useRef<HTMLVideoElement>(null);
-  const [peerConnection, setPeerConnection] = useState<RTCPeerConnection | null>(null);
+  const peerConnectionRef = useRef<RTCPeerConnection | null>(null);
   const [isConnected, setIsConnected] = useState(false);
   const [isMuted, setIsMuted] = useState(false);
   const [isVideoOff, setIsVideoOff] = useState(false);
@@ -81,14 +81,14 @@ export default function Room() {
         }
       });
 
-      setPeerConnection(pc);
+      peerConnectionRef.current = pc;
     };
 
     init();
 
     return () => {
       socket.disconnect();
-      peerConnection?.close();
+      peerConnectionRef.current?.close();
     };
   }, [roomId]);
 
