@@ -254,12 +254,11 @@ export default function Room() {
         )}
       </div>
 
-      {/* Controls - En ligne horizontale */}
+      {/* Controls - Sous la vidéo locale à droite */}
       <div style={{
         position: 'fixed',
         bottom: '20px',
-        left: '50%',
-        transform: 'translateX(-50%)',
+        right: '20px',
         display: 'flex',
         flexDirection: 'row',
         gap: '16px',

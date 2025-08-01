@@ -1,6 +1,9 @@
 // Material Icons SVGs for Google Meet style controls
 export const MicIcon = ({off = false, ...props}: {off?: boolean, [key: string]: any}) => off ? (
-  <svg {...props} viewBox="0 0 24 24" fill="none" width="28" height="28"><path d="M19 11c0 1.93-.78 3.68-2.05 4.95l1.42 1.42C19.36 16.07 20 13.62 20 11h-1zm-7 9c2.21 0 4-1.79 4-4h-2a2 2 0 0 1-4 0H7c0 2.21 1.79 4 4 4zm-7.19-2.19l1.41-1.41C4.22 14.68 3.5 12.93 3.5 11H2.5c0 2.62.64 5.07 1.81 7.19zM12 3a3 3 0 0 1 3 3v4.17l2 2V6a5 5 0 0 0-10 0v2.17l2 2V6a3 3 0 0 1 3-3zm9.19 16.19l-16.38-16.38-1.41 1.41 16.38 16.38 1.41-1.41z" fill="#fff"/><path d="M12 17a2 2 0 0 0 2-2h-4a2 2 0 0 0 2 2z" fill="#fff"/></svg>
+  <svg {...props} viewBox="0 0 24 24" fill="none" width="28" height="28">
+    <path d="M12 15a3 3 0 0 0 3-3V6a3 3 0 0 0-6 0v6a3 3 0 0 0 3 3zm5-3c0 2.76-2.24 5-5 5s-5-2.24-5-5H5c0 3.53 2.61 6.43 6 6.92V21h2v-2.08c3.39-.49 6-3.39 6-6.92h-2z" fill="#fff"/>
+    <line x1="3" y1="3" x2="21" y2="21" stroke="#fff" strokeWidth="2" strokeLinecap="round"/>
+  </svg>
 ) : (
   <svg {...props} viewBox="0 0 24 24" fill="none" width="28" height="28"><path d="M12 15a3 3 0 0 0 3-3V6a3 3 0 0 0-6 0v6a3 3 0 0 0 3 3zm5-3c0 2.76-2.24 5-5 5s-5-2.24-5-5H5c0 3.53 2.61 6.43 6 6.92V21h2v-2.08c3.39-.49 6-3.39 6-6.92h-2z" fill="#fff"/></svg>
 );
