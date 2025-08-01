@@ -1,0 +1,26 @@
+services:
+  meet-client:
+    build: ./client
+    container_name: meet-client
+    restart: always
+    expose:
+      - "3000"
+    env_file:
+      - ./.env.production
+    networks:
+      - shared
+
+  meet-server:
+    build: ./server
+    container_name: meet-server
+    restart: always
+    expose:
+      - "8000"
+    env_file:
+      - ./.env.production
+    networks:
+      - shared
+
+networks:
+  shared:
+    external: true

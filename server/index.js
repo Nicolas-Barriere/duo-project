@@ -7,9 +7,10 @@ const app = express();
 app.use(cors());
 
 const server = http.createServer(app);
+const SOCKET_SERVER_URL = process.env.SOCKET_SERVER_URL || 'http://localhost:8000';
 const io = new Server(server, {
   cors: {
-    origin: '*', // adapte selon ton déploiement
+    origin: SOCKET_SERVER_URL,
     methods: ['GET', 'POST']
   }
 });
