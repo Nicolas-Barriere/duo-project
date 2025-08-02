@@ -4,7 +4,9 @@ import { useEffect, useRef, useState } from 'react';
 import { io } from 'socket.io-client';
 import { MicIcon, VideoIcon, CallEndIcon } from './MaterialIcons';
 
-const socket = io(process.env.NEXT_PUBLIC_SOCKET_SERVER_URL || 'http://localhost:8000/api');
+const socket = io(process.env.NEXT_PUBLIC_SOCKET_SERVER_URL || 'http://localhost:8000', {
+    path: "/api/socket.io",
+});
 
 export default function Room() {
   const params = useParams();

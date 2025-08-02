@@ -7,10 +7,10 @@ const app = express();
 app.use(cors());
 
 const server = http.createServer(app);
-const SOCKET_SERVER_URL = process.env.SOCKET_SERVER_URL || 'http://localhost:8000/api';
+const CLIENT_URL = process.env.CLIENT_URL || 'http://localhost:3000';
 const io = new Server(server, {
   cors: {
-    origin: SOCKET_SERVER_URL,
+    origin: CLIENT_URL, // Utilisation de l'URL du client pour CORS
     methods: ['GET', 'POST']
   },
   path: '/api/socket.io' // Ajout du chemin pour Socket.IO
