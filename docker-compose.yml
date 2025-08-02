@@ -1,7 +1,7 @@
 services:
-  meet-client:
+  duo-client:
     build: ./client
-    container_name: meet-client
+    container_name: duo-client
     restart: always
     expose:
       - "3000"
@@ -10,9 +10,9 @@ services:
     networks:
       - shared
 
-  meet-server:
+  duo-server:
     build: ./server
-    container_name: meet-server
+    container_name: duo-server
     restart: always
     expose:
       - "8000"
